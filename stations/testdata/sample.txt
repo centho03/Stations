@@ -1,0 +1,8 @@
+stations:
+Central, 10, 20
+North, 15, 25
+South, 10, 30
+
+connections:
+Central-North
+Central-South
