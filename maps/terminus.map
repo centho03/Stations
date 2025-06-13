@@ -1,3 +1,4 @@
+cat > terminus.map << 'EOF'
 stations:
 beginning,0,0
 near,1,0
@@ -9,3 +10,4 @@ beginning-near
 beginning-terminus
 near-far
 terminus-far
+EOF
