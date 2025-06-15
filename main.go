@@ -19,9 +19,11 @@ func main() {
 		// Interactive mode - continue to the existing interactive code below
 	} else if len(os.Args) < 5 {
 		errors.PrintError(errors.ErrTooFewArgs)
+		os.Exit(1)
 		return
 	} else if len(os.Args) > 5 {
 		errors.PrintError(errors.ErrTooManyArgs)
+		os.Exit(1)
 		return
 	} else if len(os.Args) == 5 {
 		runWithArguments()
@@ -124,6 +126,7 @@ func runWithArguments() {
 	network, start, end, numTrains, err := validation.ValidateAndLoad(os.Args)
 	if err != nil {
 		errors.PrintError(err)
+		os.Exit(1)
 		return
 	}
 
