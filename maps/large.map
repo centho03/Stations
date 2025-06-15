@@ -1,4 +1,4 @@
-cat > large.map << 'EOF'
+
 stations:
 small,4,0
 large,4,6
@@ -64,4 +64,3 @@ small-00
 31-large
 04-05
 05-large
-EOF

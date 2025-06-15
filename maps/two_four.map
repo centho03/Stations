@@ -1,4 +1,4 @@
-cat > two_four.map << 'EOF'
+
 stations:
 one,1,1
 two,2,2
@@ -15,4 +15,3 @@ two-five
 one-four
 six-two
 one-six
-EOF
