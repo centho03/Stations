@@ -16,162 +16,128 @@ func normalizeEdge(from, to string) string {
 	return to + "-" + from
 }
 
-// Add this function after normalizeEdge function (around line 17)
-func assignTrainsOptimally(paths [][]string, numTrains int) []int {
-	if len(paths) == 0 {
-		return []int{}
-	}
-
-	assignments := make([]int, numTrains)
-
-	// Simple round-robin assignment
-	for i := 0; i < numTrains; i++ {
-		assignments[i] = (len(paths) - 1 - (i % len(paths)))
-	}
-
-	return assignments
-}
-
-type Train struct {
-	id      int
-	path    []string
-	pos     int // index on path
-	arrived bool
-}
-
 func SimulateTrains(g *graph.Graph, start, end string, numTrains int) {
-	// 1. Find as many unique edge-disjoint paths as possible
+	// Find disjoint paths
 	paths := FindDisjointPaths(g, start, end, numTrains)
 	if len(paths) == 0 {
 		errors.PrintError(errors.ErrNoPath)
 		return
 	}
 
-	// 2. Init trains - all use the same path for now
-	assignments := assignTrainsOptimally(paths, numTrains)
+	// Train structure
+	type Train struct {
+		id   int
+		path []string
+		pos  int
+	}
 
+	// Create trains and assign to paths
 	trains := make([]*Train, numTrains)
+	
+	// Distribute trains across available paths
 	for i := 0; i < numTrains; i++ {
-		pathIndex := assignments[i] // ← Now uses smart assignment
+		pathIdx := i % len(paths)
 		trains[i] = &Train{
 			id:   i + 1,
-			path: paths[pathIndex],
+			path: paths[pathIdx],
 			pos:  0,
 		}
 	}
 
-	// 3. Simulate movement turn by turn
-	allArrived := false
-	for !allArrived {
-		occupied := map[string]bool{}
-		usedEdges := map[string]bool{}
-
-		// Mark currently occupied stations (not start/end)
+	// Main simulation loop
+	for turn := 1; turn <= 1000; turn++ {
+		// Track what's occupied BEFORE any movement
+		stationBefore := make(map[string]int)
 		for _, t := range trains {
-			if t.pos > 0 && t.pos < len(t.path)-1 {
-				occupied[t.path[t.pos]] = true
+			if t.pos < len(t.path) {
+				stationBefore[t.path[t.pos]]++
 			}
 		}
-
-		// Sort trains by priority (closer to end = higher priority)
-		trainOrder := make([]*Train, 0, len(trains))
-		for _, t := range trains {
-			if !t.arrived {
-				trainOrder = append(trainOrder, t)
-			}
+		
+		// Track usage for this turn
+		edgeUsed := make(map[string]bool)
+		stationAfter := make(map[string]int)
+		
+		// Copy initial positions to after
+		for station, count := range stationBefore {
+			stationAfter[station] = count
 		}
-
-		// Sort by progress percentage (closer to end moves first)
-		sort.Slice(trainOrder, func(i, j int) bool {
-			progressI := float64(trainOrder[i].pos) / float64(len(trainOrder[i].path)-1)
-			progressJ := float64(trainOrder[j].pos) / float64(len(trainOrder[j].path)-1)
-			if progressI != progressJ {
-				return progressI > progressJ
+		
+		// Sort trains: those further along move first
+		trainsCopy := make([]*Train, len(trains))
+		copy(trainsCopy, trains)
+		
+		sort.Slice(trainsCopy, func(i, j int) bool {
+			t1, t2 := trainsCopy[i], trainsCopy[j]
+			if t1.pos != t2.pos {
+				return t1.pos > t2.pos
 			}
-			// If same progress, prioritize by train ID for consistency
-			return trainOrder[i].id < trainOrder[j].id
+			return t1.id < t2.id
 		})
-
-		// Move trains in priority order
-		for _, t := range trainOrder {
-			// Already at end
-			if t.pos == len(t.path)-1 {
-				t.arrived = true
+		
+		// Try to move each train
+		for _, t := range trainsCopy {
+			// Skip if at end
+			if t.pos >= len(t.path)-1 {
 				continue
 			}
-
-			nextPos := t.pos + 1
-			nextStation := t.path[nextPos]
-			edge := normalizeEdge(t.path[t.pos], nextStation)
-
-			// Enhanced movement logic for optimal scheduling
-			canMove := true
-
-			// Special logic for single path scenarios - staggered starts
-			if len(paths) == 1 {
-				// Calculate how many trains should be moving simultaneously
-				maxConcurrent := min(3, numTrains) // Allow up to 3 trains on path simultaneously
-
-				// Count trains currently on the path (not at start)
-				trainsOnPath := 0
-				for _, otherTrain := range trains {
-					if otherTrain.pos > 0 && !otherTrain.arrived {
-						trainsOnPath++
+			
+			currentStation := t.path[t.pos]
+			nextStation := t.path[t.pos+1]
+			edge := normalizeEdge(currentStation, nextStation)
+			
+			// Can move if:
+			// 1. Edge not used this turn
+			// 2. Next station has capacity
+			canMove := !edgeUsed[edge]
+			
+			if canMove {
+				// Check station capacity
+				// Intermediate stations can hold only 1 train
+				if nextStation != start && nextStation != end {
+					if stationAfter[nextStation] >= 1 {
+						canMove = false
 					}
 				}
-
-				// If at start station, only allow movement if not too many trains on path
-				if t.pos == 0 && trainsOnPath >= maxConcurrent {
-					canMove = false
-				}
-
-				// Standard collision checks
-				if usedEdges[edge] {
-					canMove = false
-				}
-
-				if nextStation != end && occupied[nextStation] {
-					canMove = false
-				}
-			} else {
-				// Multi-path logic (your existing code)
-				if usedEdges[edge] {
-					canMove = false
-				}
-
-				if nextStation != end && occupied[nextStation] {
-					canMove = false
-				}
 			}
-
+			
 			if canMove {
-				// Move train
-				t.pos = nextPos
-
-				usedEdges[edge] = true
-
-				// Check if arrived
-				if nextStation == end {
-					t.arrived = true
-				}
+				// Move the train
+				t.pos++
+				edgeUsed[edge] = true
+				stationAfter[currentStation]--
+				stationAfter[nextStation]++
 			}
 		}
-
-		// Print this turn
-		move := []string{}
+		
+		// Generate output
+		movements := []string{}
 		for _, t := range trains {
-			where := t.path[t.pos]
-			move = append(move, fmt.Sprintf("T%d-%s", t.id, where))
+			station := t.path[t.pos]
+			movements = append(movements, fmt.Sprintf("T%d-%s", t.id, station))
 		}
-		fmt.Println(strings.Join(move, " "))
-
-		// Check if all have arrived
-		allArrived = true
+		
+		// Sort by train ID
+		sort.Slice(movements, func(i, j int) bool {
+			var id1, id2 int
+			fmt.Sscanf(movements[i], "T%d-", &id1)
+			fmt.Sscanf(movements[j], "T%d-", &id2)
+			return id1 < id2
+		})
+		
+		fmt.Println(strings.Join(movements, " "))
+		
+		// Check if all done
+		allDone := true
 		for _, t := range trains {
-			if !t.arrived {
-				allArrived = false
+			if t.pos < len(t.path)-1 {
+				allDone = false
 				break
 			}
+		}
+		
+		if allDone {
+			break
 		}
 	}
 }

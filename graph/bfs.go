@@ -2,12 +2,13 @@ package graph
 
 import "sort"
 
-// ShortestPath finds the shortest path between two stations using BFS.
-// Results are deterministic by processing neighbors in alphabetical order.
+// ShortestPath finds the shortest path using BFS with deterministic ordering
 func (g *Graph) ShortestPath(from, to string) []string {
 	if from == to {
 		return []string{from}
 	}
+	
+	// Check nodes exist
 	if _, ok := g.Nodes[from]; !ok {
 		return nil
 	}
@@ -15,42 +16,55 @@ func (g *Graph) ShortestPath(from, to string) []string {
 		return nil
 	}
 
-	// BFS structures
-	queue := []string{from}
+	// BFS
+	type queueItem struct {
+		node string
+		path []string
+	}
+	
+	queue := []queueItem{{from, []string{from}}}
 	visited := map[string]bool{from: true}
-	prev := map[string]string{}
-
+	
 	for len(queue) > 0 {
 		current := queue[0]
 		queue = queue[1:]
 		
-		// Get neighbors and sort them for deterministic results
-		neighbors := make([]string, len(g.Nodes[current].Neighbors))
-		copy(neighbors, g.Nodes[current].Neighbors)
-		sort.Strings(neighbors) // ← KEY IMPROVEMENT: Deterministic order
+		// Get neighbors and sort them for deterministic behavior
+		neighbors := make([]string, len(g.Nodes[current.node].Neighbors))
+		copy(neighbors, g.Nodes[current.node].Neighbors)
+		sort.Strings(neighbors)
 		
 		for _, neighbor := range neighbors {
 			if !visited[neighbor] {
 				visited[neighbor] = true
-				prev[neighbor] = current
+				newPath := make([]string, len(current.path)+1)
+				copy(newPath, current.path)
+				newPath[len(newPath)-1] = neighbor
+				
 				if neighbor == to {
-					// Build path:
-					path := []string{to}
-					for node := to; node != from; node = prev[node] {
-						path = append([]string{prev[node]}, path...)
-					}
-					return path
+					return newPath
 				}
-				queue = append(queue, neighbor)
+				
+				queue = append(queue, queueItem{neighbor, newPath})
 			}
 		}
 	}
-	return nil // No path found
+	
+	return nil
 }
 
-// PathExists checks if a path exists between two stations
+// PathExists checks if a path exists
 func (g *Graph) PathExists(from, to string) bool {
 	return g.ShortestPath(from, to) != nil
+}
+
+// Distance returns the shortest distance
+func (g *Graph) Distance(from, to string) int {
+	path := g.ShortestPath(from, to)
+	if path == nil {
+		return -1
+	}
+	return len(path) - 1
 }
 
 // FindAllShortestPaths finds all shortest paths of the same length
@@ -58,70 +72,66 @@ func (g *Graph) FindAllShortestPaths(from, to string) [][]string {
 	if from == to {
 		return [][]string{{from}}
 	}
+	
 	if _, ok := g.Nodes[from]; !ok {
 		return nil
 	}
 	if _, ok := g.Nodes[to]; !ok {
 		return nil
 	}
-
-	// Modified BFS to find all shortest paths
-	queue := [][]string{{from}}
-	visited := map[string]int{from: 0}
+	
+	type queueItem struct {
+		node string
+		path []string
+	}
+	
+	queue := []queueItem{{from, []string{from}}}
+	visited := map[string]int{from: 0} // node -> shortest distance
 	allPaths := [][]string{}
-	targetDistance := -1
-
+	shortestDist := -1
+	
 	for len(queue) > 0 {
-		currentPath := queue[0]
+		current := queue[0]
 		queue = queue[1:]
-		current := currentPath[len(currentPath)-1]
-		currentDistance := len(currentPath) - 1
-
-		// If we've found paths to target and current path is longer, stop
-		if targetDistance != -1 && currentDistance > targetDistance {
-			break
+		currentDist := len(current.path) - 1
+		
+		// If we found the shortest distance and this path is longer, skip
+		if shortestDist != -1 && currentDist > shortestDist {
+			continue
 		}
-
-		if current == to {
-			if targetDistance == -1 {
-				targetDistance = currentDistance
+		
+		if current.node == to {
+			if shortestDist == -1 {
+				shortestDist = currentDist
 			}
-			if currentDistance == targetDistance {
-				allPaths = append(allPaths, currentPath)
+			if currentDist == shortestDist {
+				allPaths = append(allPaths, current.path)
 			}
 			continue
 		}
-
-		// Get neighbors and sort for deterministic results
-		neighbors := make([]string, len(g.Nodes[current].Neighbors))
-		copy(neighbors, g.Nodes[current].Neighbors)
+		
+		// Get sorted neighbors
+		neighbors := make([]string, len(g.Nodes[current.node].Neighbors))
+		copy(neighbors, g.Nodes[current.node].Neighbors)
 		sort.Strings(neighbors)
-
+		
 		for _, neighbor := range neighbors {
-			newDistance := currentDistance + 1
+			newDist := currentDist + 1
 			
-			// Only proceed if we haven't visited this node at a shorter distance
-			if prevDistance, exists := visited[neighbor]; !exists || newDistance <= prevDistance {
-				if !exists || newDistance < prevDistance {
-					visited[neighbor] = newDistance
+			// Only proceed if we haven't visited or found a path of same length
+			if prevDist, exists := visited[neighbor]; !exists || newDist <= prevDist {
+				if !exists || newDist < prevDist {
+					visited[neighbor] = newDist
 				}
 				
-				newPath := make([]string, len(currentPath)+1)
-				copy(newPath, currentPath)
+				newPath := make([]string, len(current.path)+1)
+				copy(newPath, current.path)
 				newPath[len(newPath)-1] = neighbor
-				queue = append(queue, newPath)
+				
+				queue = append(queue, queueItem{neighbor, newPath})
 			}
 		}
 	}
-
+	
 	return allPaths
-}
-
-// Distance returns the shortest distance between two stations
-func (g *Graph) Distance(from, to string) int {
-	path := g.ShortestPath(from, to)
-	if path == nil {
-		return -1 // No path exists
-	}
-	return len(path) - 1 // Number of edges
 }
