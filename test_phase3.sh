@@ -26,7 +26,7 @@ C-D
 EOF
 
 echo "Running: ./stations test_linear.map A D 4"
-output=$(./stations test_linear.map A D 6 2>/dev/null | wc -l)
+output=$(./stations test_linear.map A D 4 2>/dev/null | wc -l)
 echo "Turns taken: $output"
 echo "Expected: ≤ 6 turns"
 
