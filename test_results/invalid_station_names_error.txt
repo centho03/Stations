@@ -1,0 +1,2 @@
+Error: invalid station format
+exit status 1

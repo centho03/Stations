@@ -23,8 +23,14 @@ func ParseFile(path string) (*types.Network, error) {
 	hasConnections := false
 	inStations := false
 	inConnections := false
+	lineNum := 0
+	
+	// Using a map is a more reliable way to track existing connections
+	// to prevent duplicates like 'a-b' and 'b-a'.
+	connectionSet := make(map[string]bool)
 
 	for scanner.Scan() {
+		lineNum++
 		line := strings.TrimSpace(scanner.Text())
 		if line == "" || strings.HasPrefix(line, "#") {
 			continue
@@ -53,6 +59,9 @@ func ParseFile(path string) (*types.Network, error) {
 			}
 
 			name := strings.TrimSpace(parts[0])
+			if name == "" || strings.ContainsAny(name, " ,-") { // Stricter name validation
+				return nil, errors.ErrInvalidStationFormat 
+			}
 			xStr := strings.TrimSpace(parts[1])
 			yStr := strings.TrimSpace(parts[2])
 
@@ -86,6 +95,10 @@ func ParseFile(path string) (*types.Network, error) {
 			from := strings.TrimSpace(parts[0])
 			to := strings.TrimSpace(parts[1])
 
+			if from == "" || to == "" {
+				return nil, errors.ErrInvalidConnection
+			}
+
 			if _, ok := network.Stations[from]; !ok {
 				return nil, errors.ErrInvalidConnection
 			}
@@ -93,12 +106,25 @@ func ParseFile(path string) (*types.Network, error) {
 				return nil, errors.ErrInvalidConnection
 			}
 
-			if hasConnection(network.Connections[from], to) || hasConnection(network.Connections[to], from) {
-				return nil, errors.ErrDuplicateConnection
+			// To check for duplicates, we create a canonical key.
+			// 'a-b' and 'b-a' will both result in the same key "a-b" if 'a' comes before 'b'.
+			key := from + "-" + to
+			if from > to {
+				key = to + "-" + from
 			}
 
+			if connectionSet[key] {
+				return nil, errors.ErrDuplicateConnection
+			}
+			connectionSet[key] = true
+
+			// Add the connection both ways to the main network struct
 			network.Connections[from] = append(network.Connections[from], to)
 			network.Connections[to] = append(network.Connections[to], from)
+
+		} else if hasStations && hasConnections {
+			// Ignore lines that might be after the main sections
+			continue
 		} else {
 			return nil, errors.ErrMissingSections
 		}
@@ -111,13 +137,4 @@ func ParseFile(path string) (*types.Network, error) {
 		return nil, errors.ErrMissingSections
 	}
 	return network, nil
-}
-
-func hasConnection(list []string, target string) bool {
-	for _, v := range list {
-		if v == target {
-			return true
-		}
-	}
-	return false
 }

@@ -1,0 +1,2 @@
+Error: duplicate connection
+exit status 1

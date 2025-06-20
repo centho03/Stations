@@ -1,0 +1,2 @@
+Error: start and end station cannot be the same
+exit status 1

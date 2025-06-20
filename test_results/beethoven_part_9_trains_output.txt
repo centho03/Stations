@@ -1,0 +1,3 @@
+T1-verdi T2-handel T3-handel T4-handel T5-handel T6-handel T7-handel T8-handel T9-handel
+T1-part T2-mozart T3-mozart T4-mozart T5-mozart T6-mozart T7-mozart T8-mozart T9-mozart
+T2-part T3-part T4-part T5-part T6-part T7-part T8-part T9-part

@@ -1,0 +1,2 @@
+Error: missing 'stations:' or 'connections:' section
+exit status 1

@@ -1,0 +1,6 @@
+T1-farms T2-farms T3-farms T4-farms T5-farms T6-farms T7-farms T8-farms T9-farms T10-grasslands
+T1-mountain T2-mountain T3-mountain T4-mountain T5-mountain T6-mountain T7-mountain T8-mountain T9-mountain T10-suburbs
+T1-treetop T2-wetlands T3-wetlands T4-wetlands T5-wetlands T6-wetlands T7-wetlands T8-wetlands T9-wetlands T10-clouds
+T1-desert T2-desert T3-desert T4-desert T5-desert T6-desert T7-desert T8-desert T9-desert
+T10-wetlands
+T10-desert

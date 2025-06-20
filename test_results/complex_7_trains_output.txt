@@ -1,0 +1,3 @@
+T1-eta T2-beta T3-beta T4-beta T5-beta T6-beta T7-beta
+T1-kappa T2-epsilon T3-epsilon T4-epsilon T5-epsilon T6-epsilon T7-epsilon
+T2-kappa T3-kappa T4-kappa T5-kappa T6-kappa T7-kappa

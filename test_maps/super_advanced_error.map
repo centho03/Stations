@@ -1,0 +1,7 @@
+stations:
+euston,0,0
+kings_cross,1,1
+
+connections:
+euston-kings_cross
+kings_cross-euston

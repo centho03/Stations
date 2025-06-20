@@ -1,0 +1,2 @@
+Error: coordinates must be positive integers
+exit status 1

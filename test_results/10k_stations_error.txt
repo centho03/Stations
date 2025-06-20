@@ -1,0 +1,2 @@
+Error: map contains more than 10000 stations
+exit status 1

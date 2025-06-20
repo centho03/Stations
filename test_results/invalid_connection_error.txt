@@ -1,0 +1,2 @@
+Error: connection includes a non-existent station
+exit status 1

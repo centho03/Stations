@@ -1,0 +1,3 @@
+T1-terminus T2-near T3-near T4-near T5-near T6-near T7-near T8-near T9-near T10-near T11-near T12-near T13-near T14-near T15-near T16-near T17-near T18-near T19-near T20-near
+T2-far T3-far T4-far T5-far T6-far T7-far T8-far T9-far T10-far T11-far T12-far T13-far T14-far T15-far T16-far T17-far T18-far T19-far T20-far
+T2-terminus T3-terminus T4-terminus T5-terminus T6-terminus T7-terminus T8-terminus T9-terminus T10-terminus T11-terminus T12-terminus T13-terminus T14-terminus T15-terminus T16-terminus T17-terminus T18-terminus T19-terminus T20-terminus

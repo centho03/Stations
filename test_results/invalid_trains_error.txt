@@ -1,0 +1,2 @@
+Error: invalid number of trains
+exit status 1

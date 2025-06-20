@@ -1,0 +1,2 @@
+Error: duplicate coordinates
+exit status 1
