@@ -1,3 +1,0 @@
-T1-apple_avenue T2-apple_avenue T3-apple_avenue T4-apple_avenue
-T1-orange_junction T2-orange_junction T3-orange_junction T4-orange_junction
-T1-space_port T2-space_port T3-space_port T4-space_port

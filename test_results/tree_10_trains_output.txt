@@ -1,5 +1,5 @@
-T1-l1 T2-l1 T3-l1 T4-l1 T5-l1 T6-l1 T7-l1 T8-l1 T9-l1 T10-r1
-T1-l3 T2-l3 T3-l3 T4-l3 T5-l3 T6-l3 T7-l3 T8-l3 T9-l3 T10-root
+T1-l1 T2-l1 T3-l1 T4-l1 T5-l1 T6-l1 T7-l1 T8-l1 T9-l1 T10-l1
+T1-l3 T2-l3 T3-l3 T4-l3 T5-l3 T6-l3 T7-l3 T8-l3 T9-l3 T10-l2
 T1-l7 T2-l7 T3-l7 T4-l7 T5-l7 T6-l7 T7-l7 T8-l7 T9-l7 T10-l1
 T10-l3
 T10-l7

@@ -1,217 +1,217 @@
 runtime: goroutine stack exceeds 1000000000-byte limit
-runtime: sp=0xc020470348 stack=[0xc020470000, 0xc040470000]
+runtime: sp=0xc0204d0348 stack=[0xc0204d0000, 0xc0404d0000]
 fatal error: stack overflow
 
 runtime stack:
-runtime.throw({0x4cb5fe?, 0x7ffd1e098a30?})
-	/snap/go/10907/src/runtime/panic.go:1101 +0x48 fp=0x7ffd1e098a00 sp=0x7ffd1e0989d0 pc=0x469208
+runtime.throw({0x4cb5fe?, 0xc000111ec0?})
+	/snap/go/10907/src/runtime/panic.go:1101 +0x48 fp=0xc000111e90 sp=0xc000111e60 pc=0x469208
 runtime.newstack()
-	/snap/go/10907/src/runtime/stack.go:1107 +0x5bb fp=0x7ffd1e098b38 sp=0x7ffd1e098a00 pc=0x4517fb
+	/snap/go/10907/src/runtime/stack.go:1107 +0x5bb fp=0xc000111fc8 sp=0xc000111e90 pc=0x4517fb
 runtime.morestack()
-	/snap/go/10907/src/runtime/asm_amd64.s:621 +0x7a fp=0x7ffd1e098b40 sp=0x7ffd1e098b38 pc=0x46d9ba
+	/snap/go/10907/src/runtime/asm_amd64.s:621 +0x7a fp=0xc000111fd0 sp=0xc000111fc8 pc=0x46d9ba
 
-goroutine 1 gp=0xc000002380 m=0 mp=0x583980 [running]:
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:255 +0x225 fp=0xc020470358 sp=0xc020470350 pc=0x49e205
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204703b8 sp=0xc020470358 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470418 sp=0xc0204703b8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470478 sp=0xc020470418 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204704d8 sp=0xc020470478 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470538 sp=0xc0204704d8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470598 sp=0xc020470538 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204705f8 sp=0xc020470598 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470658 sp=0xc0204705f8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204706b8 sp=0xc020470658 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470718 sp=0xc0204706b8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470778 sp=0xc020470718 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204707d8 sp=0xc020470778 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470838 sp=0xc0204707d8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470898 sp=0xc020470838 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204708f8 sp=0xc020470898 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470958 sp=0xc0204708f8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204709b8 sp=0xc020470958 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470a18 sp=0xc0204709b8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470a78 sp=0xc020470a18 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470ad8 sp=0xc020470a78 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470b38 sp=0xc020470ad8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470b98 sp=0xc020470b38 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470bf8 sp=0xc020470b98 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470c58 sp=0xc020470bf8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470cb8 sp=0xc020470c58 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470d18 sp=0xc020470cb8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470d78 sp=0xc020470d18 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470dd8 sp=0xc020470d78 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470e38 sp=0xc020470dd8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470e98 sp=0xc020470e38 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470ef8 sp=0xc020470e98 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470f58 sp=0xc020470ef8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020470fb8 sp=0xc020470f58 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471018 sp=0xc020470fb8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471078 sp=0xc020471018 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204710d8 sp=0xc020471078 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471138 sp=0xc0204710d8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471198 sp=0xc020471138 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204711f8 sp=0xc020471198 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471258 sp=0xc0204711f8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204712b8 sp=0xc020471258 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471318 sp=0xc0204712b8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471378 sp=0xc020471318 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204713d8 sp=0xc020471378 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471438 sp=0xc0204713d8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471498 sp=0xc020471438 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204714f8 sp=0xc020471498 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc020471558 sp=0xc0204714f8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204715b8 sp=0xc020471558 pc=0x49e0d7
+goroutine 1 gp=0xc000002380 m=5 mp=0xc000500008 [running]:
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:255 +0x225 fp=0xc0204d0358 sp=0xc0204d0350 pc=0x49e205
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d03b8 sp=0xc0204d0358 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0418 sp=0xc0204d03b8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0478 sp=0xc0204d0418 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d04d8 sp=0xc0204d0478 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0538 sp=0xc0204d04d8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0598 sp=0xc0204d0538 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d05f8 sp=0xc0204d0598 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0658 sp=0xc0204d05f8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d06b8 sp=0xc0204d0658 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0718 sp=0xc0204d06b8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0778 sp=0xc0204d0718 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d07d8 sp=0xc0204d0778 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0838 sp=0xc0204d07d8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0898 sp=0xc0204d0838 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d08f8 sp=0xc0204d0898 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0958 sp=0xc0204d08f8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d09b8 sp=0xc0204d0958 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0a18 sp=0xc0204d09b8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0a78 sp=0xc0204d0a18 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0ad8 sp=0xc0204d0a78 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0b38 sp=0xc0204d0ad8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0b98 sp=0xc0204d0b38 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0bf8 sp=0xc0204d0b98 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0c58 sp=0xc0204d0bf8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0cb8 sp=0xc0204d0c58 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0d18 sp=0xc0204d0cb8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0d78 sp=0xc0204d0d18 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0dd8 sp=0xc0204d0d78 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0e38 sp=0xc0204d0dd8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0e98 sp=0xc0204d0e38 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0ef8 sp=0xc0204d0e98 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0f58 sp=0xc0204d0ef8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d0fb8 sp=0xc0204d0f58 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1018 sp=0xc0204d0fb8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1078 sp=0xc0204d1018 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d10d8 sp=0xc0204d1078 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1138 sp=0xc0204d10d8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1198 sp=0xc0204d1138 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d11f8 sp=0xc0204d1198 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1258 sp=0xc0204d11f8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d12b8 sp=0xc0204d1258 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1318 sp=0xc0204d12b8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1378 sp=0xc0204d1318 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d13d8 sp=0xc0204d1378 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1438 sp=0xc0204d13d8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1498 sp=0xc0204d1438 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d14f8 sp=0xc0204d1498 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d1558 sp=0xc0204d14f8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0204d15b8 sp=0xc0204d1558 pc=0x49e0d7
 ...5592297 frames elided...
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046ed78 sp=0xc04046ed18 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046edd8 sp=0xc04046ed78 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046ee38 sp=0xc04046edd8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046ee98 sp=0xc04046ee38 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046eef8 sp=0xc04046ee98 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046ef58 sp=0xc04046eef8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046efb8 sp=0xc04046ef58 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f018 sp=0xc04046efb8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f078 sp=0xc04046f018 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f0d8 sp=0xc04046f078 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f138 sp=0xc04046f0d8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f198 sp=0xc04046f138 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f1f8 sp=0xc04046f198 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f258 sp=0xc04046f1f8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f2b8 sp=0xc04046f258 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f318 sp=0xc04046f2b8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f378 sp=0xc04046f318 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f3d8 sp=0xc04046f378 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f438 sp=0xc04046f3d8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f498 sp=0xc04046f438 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f4f8 sp=0xc04046f498 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f558 sp=0xc04046f4f8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f5b8 sp=0xc04046f558 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x128, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f618 sp=0xc04046f5b8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x129, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f678 sp=0xc04046f618 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xf2, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f6d8 sp=0xc04046f678 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x11, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f738 sp=0xc04046f6d8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xf0, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f798 sp=0xc04046f738 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xf, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f7f8 sp=0xc04046f798 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xee, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f858 sp=0xc04046f7f8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xd, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f8b8 sp=0xc04046f858 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xec, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f918 sp=0xc04046f8b8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xb, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f978 sp=0xc04046f918 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xea, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046f9d8 sp=0xc04046f978 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x9, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046fa38 sp=0xc04046f9d8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xe8, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046fa98 sp=0xc04046fa38 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x7, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046faf8 sp=0xc04046fa98 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xe6, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046fb58 sp=0xc04046faf8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x5, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046fbb8 sp=0xc04046fb58 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0xe4, 0x1a5, 0x1, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046fc18 sp=0xc04046fbb8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x11b, 0x1a5, 0x7ffffffe, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046fc78 sp=0xc04046fc18 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x11a, 0x1a5, 0x7ffffffe, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046fcd8 sp=0xc04046fc78 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00002c310, 0xc000088360, 0x0, 0x1a5, 0x7fffffff, {0xc00045c380, 0x1a6, 0x1a6})
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc04046fd38 sp=0xc04046fcd8 pc=0x49e0d7
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dinicMaxFlow(0xc00002c310, 0xc000088360, 0x0, 0x1a5)
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:218 +0x187 fp=0xc04046fdb0 sp=0xc04046fd38 pc=0x49dd27
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).findFlowBasedPaths(0xc00002c310, {0x7ffd1e09ae0c, 0x2}, {0x7ffd1e09ae0f, 0x3}, 0x8)
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:132 +0x85 fp=0xc04046fe10 sp=0xc04046fdb0 pc=0x49cfa5
-gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).FindOptimalPaths(0xc00002c310, {0x7ffd1e09ae0c, 0x2}, {0x7ffd1e09ae0f, 0x3}, 0x8)
-	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:42 +0x6c fp=0xc04046fe50 sp=0xc04046fe10 pc=0x49c38c
-gitea.kood.tech/innocentkwizera1/stations/simulation.(*AdvancedSimulator).Run(0xc000088240)
-	/home/innocent/go/GitHub/stations/simulation/advanced_simulation.go:53 +0x3d fp=0xc04046fe90 sp=0xc04046fe50 pc=0x4a067d
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404ced78 sp=0xc0404ced18 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cedd8 sp=0xc0404ced78 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cee38 sp=0xc0404cedd8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cee98 sp=0xc0404cee38 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404ceef8 sp=0xc0404cee98 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cef58 sp=0xc0404ceef8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cefb8 sp=0xc0404cef58 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf018 sp=0xc0404cefb8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf078 sp=0xc0404cf018 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf0d8 sp=0xc0404cf078 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf138 sp=0xc0404cf0d8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf198 sp=0xc0404cf138 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf1f8 sp=0xc0404cf198 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf258 sp=0xc0404cf1f8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf2b8 sp=0xc0404cf258 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf318 sp=0xc0404cf2b8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf378 sp=0xc0404cf318 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf3d8 sp=0xc0404cf378 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf438 sp=0xc0404cf3d8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf498 sp=0xc0404cf438 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf4f8 sp=0xc0404cf498 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf558 sp=0xc0404cf4f8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf5b8 sp=0xc0404cf558 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf618 sp=0xc0404cf5b8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf678 sp=0xc0404cf618 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf6d8 sp=0xc0404cf678 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf738 sp=0xc0404cf6d8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf798 sp=0xc0404cf738 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf7f8 sp=0xc0404cf798 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf858 sp=0xc0404cf7f8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf8b8 sp=0xc0404cf858 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf918 sp=0xc0404cf8b8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf978 sp=0xc0404cf918 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cf9d8 sp=0xc0404cf978 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfa38 sp=0xc0404cf9d8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfa98 sp=0xc0404cfa38 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfaf8 sp=0xc0404cfa98 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfb58 sp=0xc0404cfaf8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfbb8 sp=0xc0404cfb58 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x1, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfc18 sp=0xc0404cfbb8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11b, 0x1a5, 0x7ffffffd, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfc78 sp=0xc0404cfc18 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x11a, 0x1a5, 0x7ffffffd, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfcd8 sp=0xc0404cfc78 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dfsFlow(0xc00012a2d0, 0xc00012e2a0, 0x0, 0x1a5, 0x7fffffff, {0xc000486380, 0x1a6, 0x1a6})
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:263 +0xf7 fp=0xc0404cfd38 sp=0xc0404cfcd8 pc=0x49e0d7
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).dinicMaxFlow(0xc00012a2d0, 0xc00012e2a0, 0x0, 0x1a5)
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:218 +0x187 fp=0xc0404cfdb0 sp=0xc0404cfd38 pc=0x49dd27
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).findFlowBasedPaths(0xc00012a2d0, {0x7fff1d614e25, 0x2}, {0x7fff1d614e28, 0x3}, 0x8)
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:132 +0x85 fp=0xc0404cfe10 sp=0xc0404cfdb0 pc=0x49cfa5
+gitea.kood.tech/innocentkwizera1/stations/graph.(*AdvancedPathfinder).FindOptimalPaths(0xc00012a2d0, {0x7fff1d614e25, 0x2}, {0x7fff1d614e28, 0x3}, 0x8)
+	/home/innocent/go/GitHub/stations/graph/advanced_pathfinder.go:42 +0x6c fp=0xc0404cfe50 sp=0xc0404cfe10 pc=0x49c38c
+gitea.kood.tech/innocentkwizera1/stations/simulation.(*AdvancedSimulator).Run(0xc00012e180)
+	/home/innocent/go/GitHub/stations/simulation/advanced_simulation.go:53 +0x3d fp=0xc0404cfe90 sp=0xc0404cfe50 pc=0x4a067d
 main.main()
-	/home/innocent/go/GitHub/stations/main.go:29 +0x22e fp=0xc04046ff50 sp=0xc04046fe90 pc=0x4a3fae
+	/home/innocent/go/GitHub/stations/main.go:29 +0x22e fp=0xc0404cff50 sp=0xc0404cfe90 pc=0x4a3fae
 runtime.main()
-	/snap/go/10907/src/runtime/proc.go:283 +0x28b fp=0xc04046ffe0 sp=0xc04046ff50 pc=0x43a8cb
+	/snap/go/10907/src/runtime/proc.go:283 +0x28b fp=0xc0404cffe0 sp=0xc0404cff50 pc=0x43a8cb
 runtime.goexit({})
-	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc04046ffe8 sp=0xc04046ffe0 pc=0x46f6e1
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0404cffe8 sp=0xc0404cffe0 pc=0x46f6e1
 
 goroutine 2 gp=0xc0000028c0 m=nil [force gc (idle)]:
 runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
@@ -226,12 +226,12 @@ created by runtime.init.7 in goroutine 1
 	/snap/go/10907/src/runtime/proc.go:336 +0x1a
 
 goroutine 3 gp=0xc000002e00 m=nil [GC sweep wait]:
-runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+runtime.gopark(0x1?, 0x0?, 0x0?, 0x0?, 0x0?)
 	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000067780 sp=0xc000067760 pc=0x46932e
 runtime.goparkunlock(...)
 	/snap/go/10907/src/runtime/proc.go:441
 runtime.bgsweep(0xc00001a080)
-	/snap/go/10907/src/runtime/mgcsweep.go:276 +0x94 fp=0xc0000677c8 sp=0xc000067780 pc=0x426794
+	/snap/go/10907/src/runtime/mgcsweep.go:316 +0xdf fp=0xc0000677c8 sp=0xc000067780 pc=0x4267df
 runtime.gcenable.gowrap1()
 	/snap/go/10907/src/runtime/mgc.go:204 +0x25 fp=0xc0000677e0 sp=0xc0000677c8 pc=0x41aec5
 runtime.goexit({})
@@ -240,14 +240,14 @@ created by runtime.gcenable in goroutine 1
 	/snap/go/10907/src/runtime/mgc.go:204 +0x66
 
 goroutine 4 gp=0xc000002fc0 m=nil [GC scavenge wait]:
-runtime.gopark(0xc00001a080?, 0x4f1860?, 0x1?, 0x0?, 0xc000002fc0?)
+runtime.gopark(0x10000?, 0x4f1860?, 0x0?, 0x0?, 0x0?)
 	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000067f78 sp=0xc000067f58 pc=0x46932e
 runtime.goparkunlock(...)
 	/snap/go/10907/src/runtime/proc.go:441
 runtime.(*scavengerState).park(0x582ba0)
 	/snap/go/10907/src/runtime/mgcscavenge.go:425 +0x49 fp=0xc000067fa8 sp=0xc000067f78 pc=0x424249
 runtime.bgscavenge(0xc00001a080)
-	/snap/go/10907/src/runtime/mgcscavenge.go:653 +0x3c fp=0xc000067fc8 sp=0xc000067fa8 pc=0x4247bc
+	/snap/go/10907/src/runtime/mgcscavenge.go:658 +0x59 fp=0xc000067fc8 sp=0xc000067fa8 pc=0x4247d9
 runtime.gcenable.gowrap2()
 	/snap/go/10907/src/runtime/mgc.go:205 +0x25 fp=0xc000067fe0 sp=0xc000067fc8 pc=0x41ae65
 runtime.goexit({})
@@ -255,8 +255,8 @@ runtime.goexit({})
 created by runtime.gcenable in goroutine 1
 	/snap/go/10907/src/runtime/mgc.go:205 +0xa5
 
-goroutine 5 gp=0xc000003500 m=nil [finalizer wait]:
-runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+goroutine 17 gp=0xc000102380 m=nil [finalizer wait]:
+runtime.gopark(0x5a3160?, 0x490013?, 0x78?, 0x66?, 0x4130fe?)
 	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000066630 sp=0xc000066610 pc=0x46932e
 runtime.runfinq()
 	/snap/go/10907/src/runtime/mfinal.go:196 +0x107 fp=0xc0000667e0 sp=0xc000066630 pc=0x419e87
@@ -264,4 +264,196 @@ runtime.goexit({})
 	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000667e8 sp=0xc0000667e0 pc=0x46f6e1
 created by runtime.createfing in goroutine 1
 	/snap/go/10907/src/runtime/mfinal.go:166 +0x3d
+
+goroutine 18 gp=0xc000102540 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000062738 sp=0xc000062718 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc0000627c8 sp=0xc000062738 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc0000627e0 sp=0xc0000627c8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000627e8 sp=0xc0000627e0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 19 gp=0xc000102700 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000062f38 sp=0xc000062f18 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc000062fc8 sp=0xc000062f38 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc000062fe0 sp=0xc000062fc8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000062fe8 sp=0xc000062fe0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 20 gp=0xc0001028c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000063738 sp=0xc000063718 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc0000637c8 sp=0xc000063738 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc0000637e0 sp=0xc0000637c8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000637e8 sp=0xc0000637e0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 21 gp=0xc000102a80 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000063f38 sp=0xc000063f18 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc000063fc8 sp=0xc000063f38 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc000063fe0 sp=0xc000063fc8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000063fe8 sp=0xc000063fe0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 22 gp=0xc000102c40 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000064738 sp=0xc000064718 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc0000647c8 sp=0xc000064738 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc0000647e0 sp=0xc0000647c8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000647e8 sp=0xc0000647e0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 23 gp=0xc000102e00 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000064f38 sp=0xc000064f18 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc000064fc8 sp=0xc000064f38 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc000064fe0 sp=0xc000064fc8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000064fe8 sp=0xc000064fe0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 24 gp=0xc000102fc0 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000065738 sp=0xc000065718 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc0000657c8 sp=0xc000065738 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc0000657e0 sp=0xc0000657c8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0000657e8 sp=0xc0000657e0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 25 gp=0xc000103180 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000065f38 sp=0xc000065f18 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc000065fc8 sp=0xc000065f38 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc000065fe0 sp=0xc000065fc8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000065fe8 sp=0xc000065fe0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 26 gp=0xc000103340 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000490738 sp=0xc000490718 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc0004907c8 sp=0xc000490738 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc0004907e0 sp=0xc0004907c8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0004907e8 sp=0xc0004907e0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 27 gp=0xc000103500 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000490f38 sp=0xc000490f18 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc000490fc8 sp=0xc000490f38 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc000490fe0 sp=0xc000490fc8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000490fe8 sp=0xc000490fe0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 28 gp=0xc0001036c0 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000491738 sp=0xc000491718 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc0004917c8 sp=0xc000491738 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc0004917e0 sp=0xc0004917c8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0004917e8 sp=0xc0004917e0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 29 gp=0xc000103880 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000491f38 sp=0xc000491f18 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc000491fc8 sp=0xc000491f38 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc000491fe0 sp=0xc000491fc8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000491fe8 sp=0xc000491fe0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 30 gp=0xc000103a40 m=nil [GC worker (idle)]:
+runtime.gopark(0x0?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000492738 sp=0xc000492718 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc0004927c8 sp=0xc000492738 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc0004927e0 sp=0xc0004927c8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0004927e8 sp=0xc0004927e0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 31 gp=0xc000103c00 m=nil [GC worker (idle)]:
+runtime.gopark(0xa69f2252dfe?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000492f38 sp=0xc000492f18 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc000492fc8 sp=0xc000492f38 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc000492fe0 sp=0xc000492fc8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000492fe8 sp=0xc000492fe0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 32 gp=0xc000103dc0 m=nil [GC worker (idle)]:
+runtime.gopark(0xa69f2241582?, 0x0?, 0x0?, 0x0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000493738 sp=0xc000493718 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc0004937c8 sp=0xc000493738 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc0004937e0 sp=0xc0004937c8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc0004937e8 sp=0xc0004937e0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
+
+goroutine 33 gp=0xc000494000 m=nil [GC worker (idle)]:
+runtime.gopark(0xa69f224896d?, 0x1?, 0x92?, 0xc0?, 0x0?)
+	/snap/go/10907/src/runtime/proc.go:435 +0xce fp=0xc000493f38 sp=0xc000493f18 pc=0x46932e
+runtime.gcBgMarkWorker(0xc000116070)
+	/snap/go/10907/src/runtime/mgc.go:1423 +0xe9 fp=0xc000493fc8 sp=0xc000493f38 pc=0x41d129
+runtime.gcBgMarkStartWorkers.gowrap1()
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x25 fp=0xc000493fe0 sp=0xc000493fc8 pc=0x41d005
+runtime.goexit({})
+	/snap/go/10907/src/runtime/asm_amd64.s:1700 +0x1 fp=0xc000493fe8 sp=0xc000493fe0 pc=0x46f6e1
+created by runtime.gcBgMarkStartWorkers in goroutine 1
+	/snap/go/10907/src/runtime/mgc.go:1339 +0x105
 exit status 2
